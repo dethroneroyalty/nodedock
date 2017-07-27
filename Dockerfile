@@ -10,4 +10,4 @@ EXPOSE 3000
 
 ENV NAME World
 
-CMD ["node", "app.js"]
+CMD ["node", "index.js"]

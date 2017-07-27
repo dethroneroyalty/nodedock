@@ -3,4 +3,5 @@ dist: trusty
 node_js:
   - "6"
   - "node"
+
 script: yarn run test

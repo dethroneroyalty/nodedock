@@ -3,11 +3,6 @@ const http = require("http");
 const app = require("../app");
 
 describe("Root", () => {
-  let server;
-  before((done) => {
-    server = app.listen(3001, done);
-  });
-
   context("Get to '/'", () => {
     let res;
     beforeEach((done) => {
@@ -24,9 +19,5 @@ describe("Root", () => {
     it("receive respose with status OK", () => {
       expect(res.statusCode).to.be.equal(200);
     });
-  })
-
-  after((done) => {
-    server.close(done);
-  })
-})
+  });
+});

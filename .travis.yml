@@ -1,6 +1,15 @@
-language: node_js
 dist: trusty
+
+language: node_js
 node_js:
   - "node"
 
-script: yarn run test
+services: docker
+
+install:
+  - docker build -t nodedock .
+  - docker run -d -e PORT=80 -p 127.0.0.1:80:80 --name nodedock nodedock
+
+script:
+  - docker ps | grep -q nodedock
+  - yarn run test

@@ -1,1 +1,5 @@
+.git/
 node_modules/
+.travis.yml
+README.md
+yarn.lock

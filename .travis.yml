@@ -8,7 +8,7 @@ services: docker
 
 install:
   - docker build -t nodedock .
-  - docker run -d -e PORT=3001 -p 80:3001 --name nodedock nodedock
+  - docker run -d -e PORT=3001 -p 3001:3001 --name nodedock nodedock
 
 before_script:
   - yarn install
